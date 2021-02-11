@@ -34,8 +34,8 @@ pipline{
 
 // Build Parameters
 properties([ parameters([
-  string( name: 'AWS_ACCESS_KEY_ID', defaultValue: 'AKIAU4GLDMB4SDYNEGLZ'),
-  string( name: 'AWS_SECRET_ACCESS_KEY', defaultValue: '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')
+  string( name: 'AWS_ACCESS_KEY_ID'),
+  string( name: 'AWS_SECRET_ACCESS_KEY')
 ]), pipelineTriggers([]) ])
 
 // Environment Variables
