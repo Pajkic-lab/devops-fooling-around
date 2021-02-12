@@ -13,4 +13,4 @@ sudo service jenkins status
 ec2-instance ansible_host=3.64.208.119 ansible_user=ubuntu ansible_ssh_private_key_file=/home/marko/test1.pem
 
 --jenkins conf--
-download terraform man uzip it and mov it to /usr/bin 
+download terraform manualy, uzip it and move it to /usr/bin 
