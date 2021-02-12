@@ -1,0 +1,13 @@
+
+
+ssh -i /home/marko/test1.pem ubuntu@3.64.208.119
+
+
+
+status 
+sudo service jenkins status
+
+
+
+[jenkins]
+ec2-instance ansible_host=3.64.208.119 ansible_user=ubuntu ansible_ssh_private_key_file=/home/marko/test1.pem

@@ -8,7 +8,7 @@ resource "aws_vpc" "prod-vpc" {
   enable_dns_support = true
   enable_dns_hostnames = true
   tags = {
-    Name = "production"
+    Name = "web-server-vpc"
   }
 }
 
@@ -116,10 +116,10 @@ resource "aws_instance" "web-server-instance" {
   }
 
   tags = {
-     Name = "jenkins-server"
+     Name = "web-server"
    }
 }
 
-output "jenkins_instance_ip_addr" {
+output "web-server_instance_ip_addr" {
   value = aws_eip.one.public_ip
 }
