@@ -1,5 +1,9 @@
 // Jenkinsfile
-String credentialsId = 'awsCredentials'
+//String credentialsId = 'awsCredentials'
+
+environment {
+    String credentialsId = 'awsCredentials'
+}
 
 try {
   stage('checkout') {
@@ -71,7 +75,7 @@ try {
       }
     }
   //}
-  
+
   currentBuild.result = 'SUCCESS'
 }
 catch (org.jenkinsci.plugins.workflow.steps.FlowInterruptedException flowError) {
