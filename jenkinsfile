@@ -1,14 +1,10 @@
 // Jenkinsfile
-//String credentialsId = 'awsCredentials'
-
-environment {
-    String credentialsId = 'awsCredentials'
-}
+String credentialsId = 'awsCredentials'
 
 try {
   stage('checkout') {
     node {
-      //cleanWs()
+      cleanWs()
       checkout scm
     }
   }
@@ -43,7 +39,6 @@ try {
     }
   }
 
-  //if (env.BRANCH_NAME == 'master') {
 
     stage('apply') {
       node {
@@ -74,8 +69,7 @@ try {
         }
       }
     }
-  //}
-
+  
   currentBuild.result = 'SUCCESS'
 }
 catch (org.jenkinsci.plugins.workflow.steps.FlowInterruptedException flowError) {
