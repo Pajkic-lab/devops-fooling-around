@@ -7,7 +7,7 @@ terraform {
   backend "s3" {
     bucket = "terraform-bucket-marko-devops-project"
     key    = "terraform.tfstate"
-    region = "us-east-1"
+    region = "eu-central-1"
   }
 }
 
