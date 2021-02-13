@@ -69,6 +69,15 @@ try {
         }
       }
     }
+
+    stage('check docker') {
+      node {
+          ansiColor('xterm') {
+            sh 'docker --version'
+          }
+        
+      }
+    }
   
   currentBuild.result = 'SUCCESS'
 }
