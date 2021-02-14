@@ -82,7 +82,7 @@ try {
     stage('docker test') {
       node {
           ansiColor('xterm') {
-            /client sh 'docker build -t reactapp .'
+            sh /client 'docker build -t reactapp .'
           }
       }
     }
