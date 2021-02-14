@@ -9,7 +9,7 @@ try {
     }
   }
 
-  stage('init') {
+  stage('terraform init') {
     node {
       withCredentials([[
         $class: 'AmazonWebServicesCredentialsBinding',
@@ -24,7 +24,7 @@ try {
     }
   }
 
-  stage('plan') {
+  stage('terraform plan') {
     node {
       withCredentials([[
         $class: 'AmazonWebServicesCredentialsBinding',
@@ -40,7 +40,7 @@ try {
   }
 
 
-    stage('apply') {
+    stage('terraform apply') {
       node {
         withCredentials([[
           $class: 'AmazonWebServicesCredentialsBinding',
@@ -55,7 +55,7 @@ try {
       }
     }
 
-    stage('show') {
+    stage('terraform show') {
       node {
         withCredentials([[
           $class: 'AmazonWebServicesCredentialsBinding',

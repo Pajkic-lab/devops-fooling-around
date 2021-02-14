@@ -1,8 +1,7 @@
-
+jenkins server dirs terraform ansible 
+web server all the rest
 
 ssh -i /home/marko/test1.pem ubuntu@3.64.208.119
-
-
 
 status 
 sudo service jenkins status
@@ -33,3 +32,5 @@ sudo systemctl daemon-reload
 sudo service docker stop
 sudo service docker start
 sudo service docker status
+
+
