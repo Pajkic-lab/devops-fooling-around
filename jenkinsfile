@@ -82,7 +82,7 @@ try {
     stage('docker test') {
       node {
           checkout scm
-          /client/sh "docker build -t markopajkic/reactapp ."
+          cd client sh "docker build -t markopajkic/reactapp ."
         }
     }
   
