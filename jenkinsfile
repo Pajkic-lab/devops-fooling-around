@@ -75,7 +75,14 @@ try {
           ansiColor('xterm') {
             sh 'docker --version'
           }
-        
+      }
+    }
+
+    stage('docker test') {
+      node {
+          ansiColor('xterm') {
+            /client sh 'docker build -t reactapp .'
+          }
       }
     }
   
