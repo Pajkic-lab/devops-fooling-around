@@ -82,7 +82,7 @@ try {
     stage('docker test') {
       node {
           ansiColor('xterm') {
-            /client/sh 'docker --version'
+            cd client sh 'docker --version'
           }
       }
     }
