@@ -81,10 +81,9 @@ try {
 
     stage('docker test') {
       node {
-          ansiColor('xterm') {
-            cd client sh 'docker --version'
-          }
-      }
+          checkout scm
+          sh "docker build -t markopajkic/reactapp ."
+        }
     }
   
   currentBuild.result = 'SUCCESS'
